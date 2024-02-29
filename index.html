@@ -17,9 +17,27 @@
             --primary1: #255ff4;
             --primary2: #5583f6;
         } 
+
+       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--bg);
+       }
     </style>
 </head>
 <body>
-    .clock>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
 </body>
 </html>
