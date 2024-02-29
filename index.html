@@ -67,7 +67,8 @@
         }
 
         .clock .hour,
-        .clock .min
+        .clock .min,
+        .clock .sec
         {
             position: absolute;
         }
@@ -84,8 +85,15 @@
             height: 190px;
         } 
 
+        .clock .sec,
+        .sc {
+            width: 230px;
+            height: 230px;
+        } 
+
         .hr,
-        .mn
+        .mn,
+        .sc
         {
             display: flex;
             justify-content: center;
@@ -93,7 +101,8 @@
         }
 
         .hr:before,
-        .mn:before
+        .mn:before,
+        .sc:before
         {
             box-shadow: 2px -0.6px 2px rgba(255, 255, 255, 0.1) inset,
                 2px 0.5px 2px rgba(0, 0, 0, 0.2) inset,
@@ -124,7 +133,14 @@
             height: 70px;
         } 
 
-       
+        .sc:before {
+            content: '';
+            z-index: 12;
+            background: var(--fg);
+            border-radius: 0.3em;
+            width: 10px;
+            height: 90px;
+        } 
 
     </style>
 </head>
