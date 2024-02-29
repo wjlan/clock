@@ -157,4 +157,24 @@
         </div>
     </div>
 </body>
+
+<script>
+    const secdeg = 6;  // one sec -> 6 degree
+    const mndeg = 6;   // one min -> 6 degree
+    const hrdeg = 30   // one hour -> 30 degree
+    const hr = document.querySelector('#hr');
+    const mn = document.querySelector('#mn');
+    const sc = document.querySelector('#sc');
+    // set the timer interval of 1000 millisec to repeatedly execute
+    setInterval(() => {
+        let day = new Date(); // get the current time
+        let h = day.getHours() * hrdeg;  // get the current h
+        let m = day.getMinutes() * mndeg;  // get the current m 
+        let s = day.getSeconds() * secdeg;   // get the current s
+        hr.style.transform = `rotateZ(${h + m / 12}deg)`;
+        mn.style.transform = `rotateZ(${m}deg)`;
+        sc.style.transform = `rotateZ(${s}deg)`;
+    }, 1000) 
+</script>
+
 </html>
